@@ -1,0 +1,55 @@
+<div>
+  <form>
+    <div class="pool">
+      <label for="pool-number">Pool number</label>
+      <input type="text" name="pool-number"/>
+    </div>
+    
+    <div class="sender">
+      <label for="sender">Sender</label>
+      <input type="text" name="sender"/>
+    </div>
+
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>    
+  </form>
+</div>
+
+<div>
+  <label for="file">Choose File</label>
+  <input type='file' accept='text/plain' multiple (change)='openFile($event)'>
+</div>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th *ngFor="let name of tableHeader | keyvalue: asIsOrder">
+        <a (click)="sortCol(name.value)">
+            {{name.value}}
+        </a>
+      </th>
+      <th>
+        actions
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableColumns">
+      <td 
+        *ngFor="let value of row | keyvalue: asIsOrder"
+        [attr.data-label]="value.key"
+        >
+          {{value.value}}
+      </td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

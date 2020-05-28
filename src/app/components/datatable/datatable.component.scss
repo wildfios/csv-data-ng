@@ -1,0 +1,101 @@
+  form {
+    div {
+      margin: 4px;
+      input, label {
+        display: block;
+        padding: 0;
+        margin: 0;
+        //width: 100%;
+      }
+    }
+
+    // .pool {
+    //   width: 110px;
+    // }
+  }
+
+
+  /* ================================ */
+  table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    
+    button {
+      background: #cacaca;
+      border: 1px solid #eeeeee;
+      border-radius: 2px;
+      display: block;
+    }
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 2px;
+    border-right: 1px #cccccc solid;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
+ 
+  @media screen and (max-width: 980px) {
+    table {
+      border: 0;
+    }
+  
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+// table {
+//     border-spacing: 0;
+//     width: 100%;
+//     border: 1px solid #ddd;
+//     font-size: 12px;
+//   }
+  
+//   th, td {
+//     text-align: left;
+//     padding: 2px;
+//     border-right: 1px #cccccc solid;
+//   }
+  
+//   tr:nth-child(even) {
+//     background-color: #f2f2f2
+//   }
